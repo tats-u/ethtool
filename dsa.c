@@ -622,7 +622,7 @@ static void dsa_mv88e6390(int reg, u16 val)
 		      (val & 0x0300) == 0x0000 ? "10 Mbps" :
 		      (val & 0x0300) == 0x0100 ? "100 or 200 Mbps" :
 		      (val & 0x0300) == 0x0200 ? "1000 Mbps" :
-		      (val & 0x0300) == 0x0300 ? "10 Gb or 2500 Mbps" : "?");
+		      (val & 0x0300) == 0x0300 ? "10 Gb or 2.5 Gbps" : "?");
 		FIELD("Duplex Fixed", "%u", !!(val & 0x0080));
 		FIELD("EEE Enabled", "%u", !!(val & 0x0040));
 		FIELD("Transmitter Paused", "%u", !!(val & 0x0020));
@@ -646,7 +646,7 @@ static void dsa_mv88e6390(int reg, u16 val)
 		      (val & 0x0003) == 0x0000 ? "10 Mbps" :
 		      (val & 0x0003) == 0x0001 ? "100 or 200 Mbps" :
 		      (val & 0x0003) == 0x0002 ? "1000 Mbps" :
-		      (val & 0x0003) == 0x0003 ? "10 Gb or 2500 Mbps" : "?");
+		      (val & 0x0003) == 0x0003 ? "10 Gb or 2.5 Gbps" : "?");
 		break;
 	case 2:
 		REG(reg, "Flow Control", val);
